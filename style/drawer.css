@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    min-width: 300px;
 }
 .favResult{
     height: 100%;

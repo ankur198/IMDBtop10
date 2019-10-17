@@ -3,6 +3,7 @@ async function getMovies(category) {
     res.innerHTML = "Fetching results..."
     const movies = await getResult(category)
     res.innerHTML = ""
+    
     for (const movie of movies) {
         if (!movie.adult) {
             makeCard(movie, res)
@@ -10,16 +11,16 @@ async function getMovies(category) {
     }
 
 };
-getMovies('popular')
+// getMovies('popular')
 
-function categoryUpdated(event) {
-    const category = event.srcElement.value
+function categoryUpdated(category) {
+    document.querySelector('.status').innerHTML = `Showing first 10 category from ${category}`
     getMovies(category)
 }
 
 function addToFav(movie) {
     movie = JSON.parse(JSON.stringify(movie).replace(/__/g, "'"))
-    console.log(movie)
+    // console.log(movie)
     localStorage.setItem(movie.id, JSON.stringify(movie));
     refreshDrawer()
 }

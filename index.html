@@ -20,7 +20,9 @@
                 <h3>Close</h3>
             </button>
         </div>
-        <div class="favResult"></div>
+        <div class="favResult">
+
+        </div>
     </div>
     <div class="nav">
         <h1>IMDB TOP 10</h1>
@@ -28,13 +30,17 @@
     </div>
     <div class="finder">
         <div class="filter">
-            <span>Showing first 10 results from</span>
-            <select onchange="categoryUpdated(event)">
-                <option value="popular" selected>Popular</option>
-                <option value="top">Top</option>
-                <option value="latest">Latest</option>
-            </select>
+            <button class="box" onclick="categoryUpdated('popular')">
+                Popular
+            </button>
+            <button class="box" onclick="categoryUpdated('top')">
+                Top Rated
+            </button>
+            <button class="box" onclick="categoryUpdated('latest')">
+                Latest
+            </button>
         </div>
+        <div class="status"></div>
         <div class="result">
 
         </div>

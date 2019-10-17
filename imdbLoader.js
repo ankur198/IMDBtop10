@@ -25,6 +25,7 @@ async function getResult(category) {
             const req = new XMLHttpRequest();
             req.onreadystatechange = function () {
                 if (this.status === 200 && this.readyState === 4) {
+                    // console.log(this.response);
                     res(JSON.parse(this.response).results.slice(0, 10))
                 }
             }
@@ -33,6 +34,7 @@ async function getResult(category) {
         })
 
     }
+    
 
     return await getData(query)
 }

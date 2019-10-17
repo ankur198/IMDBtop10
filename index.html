@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IMDB Top 10</title>
+    <link href="/style/circular-progress.css" rel="stylesheet">
+    <link href="/style/card.css" rel="stylesheet">
+    <link href="/style/drawer.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <div class="myFav hide">
+        <div class="heading">
+            <h3>My fav</h3>
+            <button>
+                <h3 onclick="hide()">Close</h3>
+            </button>
+        </div>
+        <div class="favResult"></div>
+    </div>
+    <div class="nav">
+        <h1>IMDB TOP 10</h1>
+        <button onclick="showFav()">SHOW FAV</button>
+    </div>
+    <div class="finder">
+        <div class="filter">
+            <span>Showing first 10 results from</span>
+            <select onchange="categoryUpdated(event)">
+                <option value="popular" selected>Popular</option>
+                <option value="top">Top</option>
+                <option value="latest">Latest</option>
+            </select>
+        </div>
+        <div class="result">
+
+        </div>
+    </div>
+    <script src="imdbLoader.js"></script>
+    <script src="cardMaker.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+body{
+    background: rgb(228, 225, 183);
+    margin: 0;
+}
+.nav{
+    height: 100px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.nav h1{
+    margin: 0;
+}
+.nav button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: white;
+}
+.hide{
+    display: none;
+}
+
+
+
+.finder{
+    padding-top: 50px;
+}
+.filter{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 10px;
+}
+.filter select{
+    font-size: 1.3rem;
+    background: yellowgreen;
+}
+.result{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
